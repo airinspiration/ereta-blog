@@ -76,6 +76,8 @@ Using Eric Zimmerman `PECmd` in order to analyze the prefetch files, we were abl
 ![image](https://github.com/airinspiration/ereta-blog/assets/99099600/66054dd7-924b-45d2-a746-5c944d927071)
 
 ### Task 7
+When was the tool executed to dump credentials? \
+**R=2024-05-21 03:18:08** 
 
 Looking at the `RunTime` column of the detected `RUBEUS.EXE` file, it was run on `2024-05-21 03:18:08`
 ![image](https://github.com/airinspiration/ereta-blog/assets/99099600/6a7510bb-babf-4dd9-ae94-371868efb272)
