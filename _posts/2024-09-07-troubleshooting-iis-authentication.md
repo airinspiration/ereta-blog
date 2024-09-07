@@ -14,7 +14,7 @@ Today when I saw this issue, I thought: Some IIS process must not be able to acc
 The procedure I follow is:
 
 1. Open Procmon and let it run for a few seconds
-2. Eliminate process names that - in my criteria - are only noise. In my case, this are the processes that I added an exception for
+2. Eliminate process names that - in my criteria - are only noise. In my case, these are the processes that I added an exception for
    
 ![image](https://github.com/user-attachments/assets/89976c70-5e38-4475-a71a-97552ed5e036)
 
