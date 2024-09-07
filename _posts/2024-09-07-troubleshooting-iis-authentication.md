@@ -34,5 +34,6 @@ In my case, this makes sense as I do have `anonymousAuthentication` set as `true
 ![image](https://github.com/user-attachments/assets/fee6be65-303b-4210-95ff-263a1c9c1e84)
 
 All this information that we have reviewed, indicates that we need to give `NT AUTHORITY\IUSR` reading permission to the folder `C:\Users\Administrator\Documents\website`.
-Once that's done, we are now able to access 
+Once that's done, we are now able to access
+
 ![image](https://github.com/user-attachments/assets/4c17aa34-5574-4ff9-9d47-d83670194d55)
