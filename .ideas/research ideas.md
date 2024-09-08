@@ -3,3 +3,4 @@
 2. Explore `crackmapexec` from the red/blue standpoint (how it works, traffic seen, artifacts in computer)
 3. Lateral movement (e.g emapper) # Comment: I need to scope exactly what I want to know about this one
 4. Read embee research blogs and apply what I learn from them.
+5. Dll's (dll sideloading)
