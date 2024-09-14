@@ -4,3 +4,4 @@
 3. Lateral movement (e.g emapper) # Comment: I need to scope exactly what I want to know about this one
 4. Read embee research blogs and apply what I learn from them.
 5. Dll's (dll sideloading)
+5. Explore how does [`SharpNBTScan`](https://github.com/BronzeTicket/SharpNBTScan) works
