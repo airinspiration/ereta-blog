@@ -5,6 +5,6 @@
 4. Read embee research blogs and apply what I learn from them.
 5. Dll's (dll sideloading)
 5. Explore how does [`SharpNBTScan`](https://github.com/BronzeTicket/SharpNBTScan) works
-6. MS365/AAD Attacks
-    Any IAV mentioned in [this](https://www.splunk.com/en_us/blog/security/hunting-m365-invaders-blue-team-s-guide-to-initial-access-vectors.html) blog
+6. MS365/AAD Attacks \
+    Any IAV mentioned in [this](https://www.splunk.com/en_us/blog/security/hunting-m365-invaders-blue-team-s-guide-to-initial-access-vectors.html) blog \
     [AAD Attack & Defense](https://github.com/Cloud-Architekt/AzureAD-Attack-Defense/blob/main/Adversary-in-the-Middle.md)
