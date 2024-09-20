@@ -29,7 +29,7 @@ This is the first challenge of the course from TCM Academy called "Practical Mal
     **R=** Checks for the presence of debuggers with function _IsDebuggerPresent_ \
     ![image](https://github.com/user-attachments/assets/8bce722b-30c7-4034-849b-64108afcf7a0)
 
-- Is it likely that this binary is packed?
+- Is it likely that this binary is packed? \
     **R=** No, way too many visible ASCII strings for the binary to be packed
 ### Basic Dynamic Analysis
  - Describe initial detonation. Are there any notable occurrences at first detonation? Without internet simulation? With internet simulation?
