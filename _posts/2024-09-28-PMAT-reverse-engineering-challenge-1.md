@@ -79,7 +79,7 @@ This is the first challenge of the course from TCM Academy called "Practical Mal
    ![image](https://github.com/user-attachments/assets/dc7f8b77-61ed-4251-b1cb-d6c7b0744d87)
 
    Full code:
-  ```
+```
 
 
 # Powerfun - Written by Ben Turner & Dave Hardy
@@ -156,9 +156,10 @@ function powerfun
     $listener.Stop()
     }
 }
+
 powerfun -Command reverse -Sslcon true
 
-  ```
+```
 
  - What is the callback protocol at detonation?
 
