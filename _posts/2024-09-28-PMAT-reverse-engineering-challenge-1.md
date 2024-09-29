@@ -158,6 +158,7 @@ function powerfun
 }
 
 powerfun -Command reverse -Sslcon true
+
   ```
  - What is the callback protocol at detonation?
 
