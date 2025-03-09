@@ -16,7 +16,7 @@ Based on the caller's initial information, you confirm there was an infection.  
 **Active Directory (AD) domain controller**:  10.1.17[.]2 - WIN-GSH54QLW48D \
 **AD environment name**:  BLUEMOONTUESDAY \
 **LAN segment gateway**:  10.1.17[.]1 \
-**LAN segment broadcast address**:  10.1.17[.]255 \
+**LAN segment broadcast address**:  10.1.17[.]255
 
 # Questions
 
