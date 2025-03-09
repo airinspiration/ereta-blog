@@ -1,5 +1,5 @@
 ---
-title: "TRAFFIC ANALYSIS EXERCISE: DOWNLOAD FROM FAKE SOFTWARE SITE"
+title: "Traffic Analysis Exercise: Download from fake software site"
 date: 2025-03-09
 ---
 
