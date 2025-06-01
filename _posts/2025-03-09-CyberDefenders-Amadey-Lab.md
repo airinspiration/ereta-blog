@@ -1,6 +1,6 @@
 ---
-title: "Traffic Analysis Exercise: Download from fake software site"
-date: 2025-03-09
+title: "CyberDefenders Amadey Lab"
+date: 2025-06-01
 ---
 
 # Questions
