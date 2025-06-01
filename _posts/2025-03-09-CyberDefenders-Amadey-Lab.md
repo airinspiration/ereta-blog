@@ -2,6 +2,8 @@
 title: "CyberDefenders Amadey Lab"
 date: 2025-06-01
 ---
+# Scenario
+An after-hours alert from the Endpoint Detection and Response (EDR) system flags suspicious activity on a Windows workstation. The flagged malware aligns with the Amadey Trojan Stealer. Your job is to analyze the presented memory dump and create a detailed report for actions taken by the malware.
 
 # Questions
 
