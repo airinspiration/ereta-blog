@@ -1,3 +1,7 @@
+---
+title: "TryHackMe - VoltTyphoon"
+date: 2025-06-20
+---
 
 # Initial Access
 ### 1. Comb through the ADSelfService Plus logs to begin retracing the attacker’s steps. At what time (ISO 8601 format) was Dean's password changed and their account taken over by the attacker?
