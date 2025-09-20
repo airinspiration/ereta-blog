@@ -9,3 +9,4 @@
 6. MS365/AAD Attacks \
     Any IAV mentioned in [this](https://www.splunk.com/en_us/blog/security/hunting-m365-invaders-blue-team-s-guide-to-initial-access-vectors.html) blog \
     [AAD Attack & Defense](https://github.com/Cloud-Architekt/AzureAD-Attack-Defense/blob/main/Adversary-in-the-Middle.md)
+7. Explore named pipes (resources bookmarked in browser)
