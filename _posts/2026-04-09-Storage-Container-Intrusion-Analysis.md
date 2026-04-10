@@ -9,6 +9,7 @@ You are tasked with investigating security risks in Secure Corp’s Azure enviro
 The first thing I'm doing is familiarizing myself with the data. I've never truly deep dived into data from Azure RBAC. within Activity Logs, so I want to get familiarized with it.
 
 I just started into googling those logs, and the AI summary revealed that it is part of the `AzureActivity` table which from my built knowledge, I know it refers to the `Azure Activity Log` events.
+
 <img width="1634" height="598" alt="image" src="https://github.com/user-attachments/assets/15ca8a49-f5e6-4c48-b007-a72ffb1e3cc6" />
 
 
@@ -37,10 +38,10 @@ Identify and determine the ip addresses associated with the brute forcing activi
 R= **36.255.87.7 , 36.255.87.5**
 
 Checking on the `azure.platformlogs` (Azure Monitor) Sign In Logs, I discarded this option as there was only 8 events all successful, which is not an indicator of a bruteforce attack.
-<img width="2550" height="571" alt="image" src="https://github.com/user-attachments/assets/0b11de02-4e11-4db2-a247-a06ded27c235" />
+<img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/0b11de02-4e11-4db2-a247-a06ded27c235" />
 
 Checking into the logs with the most amount of entries (`GetBlob` event action), we can observe that there seems to be attempts of reading a blob, with no authentication provided (`azure.activitylogs.identity.type` == `Anonymous`) which failed ("Conflict (HTTP Status Code: 409)" according to [Azure Activity Log event schema](https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log-schema) ).
-<img width="2537" height="1229" alt="image" src="https://github.com/user-attachments/assets/bceea038-693f-4ebf-850b-72dada7396b7" />
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/bceea038-693f-4ebf-850b-72dada7396b7" />
 
 Another data point is that this attempt comes from India, which along with the fact that it's attempting to read a blob using Anonymous access (and failed) it is worth it to list the multiple values seen in these fields to know with how many different values are we dealing with (thus proving [or not] a brute force attack.)
 <img width="645" height="1154" alt="image" src="https://github.com/user-attachments/assets/cdb0781a-2f10-4124-8edf-f91edcf6eb57" />
@@ -53,7 +54,7 @@ FROM az-storage-01
   | STATS COUNT(), VALUES(azure.activitylogs.category), VALUES(azure.activitylogs.identity.type), VALUES(azure.activitylogs.operation_name), VALUES(azure.activitylogs.statusCode), VALUES(azure.activitylogs.statusText), VALUES(azure.activitylogs.uri), VALUES(azure.resource.id), VALUES(geo.city_name), VALUES(geo.country_iso_code), VALUES(source.as.organization.name) BY source.ip
 ```
 
-<img width="2548" height="672" alt="image" src="https://github.com/user-attachments/assets/df63c5da-547f-4751-82f6-be79b28fbfac" />
+<img width="645" height="1154" alt="image" src="https://github.com/user-attachments/assets/df63c5da-547f-4751-82f6-be79b28fbfac" />
 
 # Question 2
 Identify and determine the userAgentHeader associated with the brute forcing activity.
