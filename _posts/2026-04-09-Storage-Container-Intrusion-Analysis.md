@@ -1,5 +1,5 @@
 ---
-title: Storage Container Intrusion Analysis
+title: Infinity Learning Labs: Storage Container Intrusion Analysis
 date: 2026-04-09
 ---
 # Scenario
