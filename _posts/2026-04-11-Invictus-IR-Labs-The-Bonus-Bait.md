@@ -15,31 +15,31 @@ Track actor movement and actions in the environment
 **How many users received the internal phishing lure related to the "bonus" theme?** \
 This one was quick, knowing we already have the email messages logs, I just built the following trivial query to find the answer. \
 
-<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e" />
+![image](https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e)
 
 ## Question 2
 **We now know the threat actor shared a document via SharePoint. What is the full object ID (URL) of the file that was shared?** \
 Checking on Audit Data Sources available, answer might be likely in one of those two.
 
-<img  width="595" height="780" alt="image" src="https://github.com/user-attachments/assets/03e25aed-d77c-48c1-804e-32022cbfd83b" />
+![image](https://github.com/user-attachments/assets/03e25aed-d77c-48c1-804e-32022cbfd83b)
 
 Given a document was shared, it had to be uploaded, so this event should help us figuring out what was it.
-<img width="827" height="775" alt="image" src="https://github.com/user-attachments/assets/e11fb3e6-c755-486a-b4ca-b6a135ebd6c4" />
+![image](https://github.com/user-attachments/assets/e11fb3e6-c755-486a-b4ca-b6a135ebd6c4)
 
 Checking on the uploaded files we can observe that there is only one related to the "Bonus" lead given in the first question
 
-<img width="2119" height="462" alt="image" src="https://github.com/user-attachments/assets/8a467331-3067-4892-a210-2746285bd7d0" />
+![image](https://github.com/user-attachments/assets/8a467331-3067-4892-a210-2746285bd7d0)
 
 
 ## Question 3
 **What was the IP address used by the threat actor while performing activities on SharePoint?** \
 Adding as a filter the sharepoint file found inthe previous question and extracting the ClientIP of that action, we were able to find the Source IP of the threat actor.
 
-<img width="850" height="630" alt="image" src="https://github.com/user-attachments/assets/9abd36a1-eb30-4f1f-9ef1-e0f59acd98af" />
+![image](https://github.com/user-attachments/assets/9abd36a1-eb30-4f1f-9ef1-e0f59acd98af)
 
 That IP is tagged as VPN and associated with Malware by VT
 
-<img width="885" height="574" alt="image" src="https://github.com/user-attachments/assets/57953fb9-c70c-415d-b103-5395a11d98e2" />
+![image](https://github.com/user-attachments/assets/57953fb9-c70c-415d-b103-5395a11d98e2)
 
 ## Question 4
 **What is the Object ID of the file accessed by the threat actor using the '154.47.30.133' IP address? (Note: we are not looking for .jpg or image files)**
