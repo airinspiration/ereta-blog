@@ -12,8 +12,8 @@ Identify malicious behavior through analysis of the different log sources
 Track actor movement and actions in the environment
 
 ## Question 1
-**How many users received the internal phishing lure related to the "bonus" theme?**
-This one was quick, knowing we already have the email messages logs, I just built the following trivial query to find the answer. \
+**How many users received the internal phishing lure related to the "bonus" theme?** \
+This one was quick, knowing we already have the email messages logs, I just built the following trivial query to find the answer.
 
 ![image](https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e)
 
