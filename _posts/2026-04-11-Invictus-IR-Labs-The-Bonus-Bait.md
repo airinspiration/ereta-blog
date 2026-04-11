@@ -28,7 +28,8 @@ Given a document was shared, it had to be uploaded, so this event should help us
 
 Checking on the uploaded files we can observe that there is only one related to the "Bonus" lead given in the first question
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/29dd10c1-222f-4bfb-8a1f-aab7313ff3d1" />
+<img width="2119" height="462" alt="image" src="https://github.com/user-attachments/assets/8a467331-3067-4892-a210-2746285bd7d0" />
+
 
 ## Question 3
 **What was the IP address used by the threat actor while performing activities on SharePoint?** \
