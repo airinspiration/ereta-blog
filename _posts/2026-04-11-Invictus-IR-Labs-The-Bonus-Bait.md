@@ -34,7 +34,7 @@ Checking on the uploaded files we can observe that there is only one related to 
 **What was the IP address used by the threat actor while performing activities on SharePoint?** \
 Adding as a filter the sharepoint file found inthe previous question and extracting the ClientIP of that action, we were able to find the Source IP of the threat actor.
 
-<img width="2105" height="630" alt="image" src="https://github.com/user-attachments/assets/9abd36a1-eb30-4f1f-9ef1-e0f59acd98af" />
+<img width="850" height="630" alt="image" src="https://github.com/user-attachments/assets/9abd36a1-eb30-4f1f-9ef1-e0f59acd98af" />
 
 That IP is tagged as VPN and associated with Malware by VT
 
