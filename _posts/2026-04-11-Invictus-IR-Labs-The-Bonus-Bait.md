@@ -21,7 +21,7 @@ This one was quick, knowing we already have the email messages logs, I just buil
 **We now know the threat actor shared a document via SharePoint. What is the full object ID (URL) of the file that was shared?** \
 Checking on Audit Data Sources available, answer might be likely in one of those two.
 
-<img width="595" height="780" alt="image" src="https://github.com/user-attachments/assets/03e25aed-d77c-48c1-804e-32022cbfd83b" />
+<img height="780" alt="image" src="https://github.com/user-attachments/assets/03e25aed-d77c-48c1-804e-32022cbfd83b" />
 
 Given a document was shared, it had to be uploaded, so this event should help us figuring out what was it.
 <img width="827" height="775" alt="image" src="https://github.com/user-attachments/assets/e11fb3e6-c755-486a-b4ca-b6a135ebd6c4" />
