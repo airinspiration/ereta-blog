@@ -12,7 +12,7 @@ Identify malicious behavior through analysis of the different log sources
 Track actor movement and actions in the environment
 
 ## Question 1
-**How many users received the internal phishing lure related to the "bonus" theme?** \
+**How many users received the internal phishing lure related to the "bonus" theme?**
 This one was quick, knowing we already have the email messages logs, I just built the following trivial query to find the answer. \
 
 ![image](https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e)
@@ -72,7 +72,7 @@ Expanding further we can find the IP that created the rule.
 From the explanation in the previous answer, the domain is `acme-suite.com`
 
 ## Question 8
-**Interesting, all emails from this domain are being removed. According to the IT administrator, this is a company we've done business with in the past. Can you identify the email address associated with this domain?** \
+**Interesting, all emails from this domain are being removed. According to the IT administrator, this is a company we've done business with in the past. Can you identify the email address associated with this domain?** 
 
 As it was a company that it has been doing business in the past, I started searching for any value in the `RecipientAddress` field that contains the domain, but I was unable to find anything. Then, I tried my luck using the `SenderAddress` field and I was successful on it.
 
