@@ -117,4 +117,7 @@ Filtering why the `Add service principal.` events + by the Service Principal ID,
 
 <img width="1271" height="633" alt="image" src="https://github.com/user-attachments/assets/5aefd208-cd2b-4eef-a36a-552ef048d07c" />
 
+This was not asked, but we can also get the scope of permissions given to the oauth app. As we can observe there are several of them including able to modify the mails/mailbox item, access to calendar, contacts and user data. Notice the presence of `offline_access`, which allows the oath app to get a refresh token to get persistent access and not only an access token which would be available for around an hour.
+
+<img width="1948" height="653" alt="image" src="https://github.com/user-attachments/assets/fb382328-ff64-4977-8f45-a8ded49562ac" />
 
