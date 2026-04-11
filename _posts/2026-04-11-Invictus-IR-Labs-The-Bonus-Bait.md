@@ -15,7 +15,7 @@ Track actor movement and actions in the environment
 **How many users received the internal phishing lure related to the "bonus" theme?** \
 This one was quick, knowing we already have the email messages logs, I just built the following trivial query to find the answer. \
 
-<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e" />
+<img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/6ec20f5b-64ab-422c-93a9-b4915268279e" />
 
 ## Question 2
 **We now know the threat actor shared a document via SharePoint. What is the full object ID (URL) of the file that was shared?** \
