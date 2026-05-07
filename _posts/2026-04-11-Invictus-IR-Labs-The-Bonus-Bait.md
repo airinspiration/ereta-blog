@@ -1,5 +1,5 @@
 ---
-title: "Invictus IR Labs: The Bonus Bait"
+title: "Invictus IR Labs: The Bonus Bait (Medium)"
 date: 2026-04-11
 ---
 
