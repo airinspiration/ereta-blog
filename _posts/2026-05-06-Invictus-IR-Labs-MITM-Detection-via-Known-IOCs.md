@@ -1,5 +1,5 @@
 ---
-title: "Invictus IR Labs: Defender - Man-in-the-Middle, Detection via Known IOCs (Medium)"
+title: "Invictus IR Labs: Defender - Man-in-the-Middle, Detection via Known IOCs (Medium difficulty)"
 date: 2026-05-10
 ---
 
