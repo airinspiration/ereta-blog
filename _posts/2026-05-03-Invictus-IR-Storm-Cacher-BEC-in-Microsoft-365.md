@@ -36,7 +36,7 @@ There's no further filtering we need to do as we only have `Operation` values re
 **Which IP address was responsible for the majority of the mailbox deletion events?**
 
 By filtering for the events for the user with the spike of email deletions, and counting the events by the ClientIP that requested them (after unpacking the `AuditData` field), we are able to see what IP caused the majority of events.
-![image](https://github.com/user-attachments/assets/320bfa31-5982-4ba0-aabf-ccc3ee5811e)
+![image](https://github.com/user-attachments/assets/320bfa31-5982-4ba0-aabf-ccc3ee5811e9)
 
 # Question 3
 **The IT administrator observed multiple MoveToDeletedItems events for the user. How many emails were permanently deleted by the threat actor**
