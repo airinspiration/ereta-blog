@@ -1,6 +1,6 @@
 ---
 title: "Invictus IR Labs: Defender - Man-in-the-Middle, Detection via Known IOCs (Medium)"
-date: 2026-05-16
+date: 2026-05-10
 ---
 
 # Background
