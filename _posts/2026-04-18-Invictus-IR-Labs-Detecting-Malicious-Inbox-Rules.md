@@ -1,5 +1,5 @@
 ---
-title: "Silent Forwarding: Detecting Malicious Mailbox Rules (Easy)"
+title: "Silent Forwarding: Detecting Malicious Mailbox Rules (Easy difficulty)"
 date: 2026-04-18
 ---
 
