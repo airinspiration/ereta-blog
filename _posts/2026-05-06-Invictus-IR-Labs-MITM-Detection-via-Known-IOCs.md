@@ -54,22 +54,21 @@ Querying for sign in logs from the associated ip addresses, and deduplicating th
 # Question 7
 **Examine the first login originating from the IP addresses you identified earlier. What was the name of the Microsoft service or portal that was accessed during that login?**
 
-By leveraging `arg_min()` to get the first (oldest) log, we can see which app the attacker first logged into. Which that app is known
-to be commonly used to redirect to after a user has been a victim of an AiTM atack.
+By leveraging `arg_min()` to get the first (oldest) log, we can see which app the attacker first logged into. Which that app is known to be commonly used to redirect to after a user has been a victim of an AiTM atack.
 
 ![image](https://github.com/user-attachments/assets/6b460d86-b47a-494a-914c-101e238aed4e)
 
 # Question 8
 **Interesting, this behavior is often associated with man-in-the-middle attacks, what is the session ID associated for this activity?**
 
-As I mentioned before, a login to this app is standard AiTM. So we just need to display the `SessionId` field as well.
+As I mentioned before, a login to this app is standard AiTM. So we just need to display the `SessionId` field as well. \
 
 ![image](https://github.com/user-attachments/assets/58c7a934-4df6-4c48-b91b-496713fe5eb1)
 
 # Question 9
 **Since this session is likely to have been hijacked during the adversary-in-the-middle attack, what is the first IP that is logging in for this session?**
 
-As this session was hijacked (meaning that the user logged in legitimaly and then the TA logged in with the stolen token, by removing the filter specifying the `IPAddresses` the TA used to login from, we are able to get the user IP.
+As this session was hijacked (meaning that the user logged in legitimaly and then the TA logged in with the stolen token, by removing the filter specifying the `IPAddresses` the TA used to login from, we are able to get the user IP. \
 
 ![image](https://github.com/user-attachments/assets/ad9d44c6-8c89-4feb-89c3-e420845d0e17)
 
