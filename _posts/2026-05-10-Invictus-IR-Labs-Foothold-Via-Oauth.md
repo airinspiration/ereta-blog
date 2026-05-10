@@ -1,5 +1,5 @@
 ---
-title: "Invictus IR Labs: Defender - Man-in-the-Middle, Detection via Known IOCs (Medium difficulty)"
+title: "Invictus IR Labs: Azure - Foothold via OAuth (Medium difficulty)"
 date: 2026-05-10
 ---
 
