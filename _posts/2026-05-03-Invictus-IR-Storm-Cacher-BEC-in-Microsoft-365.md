@@ -1,5 +1,5 @@
 ---
-title: "Storm Catcher: BEC in Microsoft 365 (Hard)"
+title: "Storm Catcher: BEC in Microsoft 365 (Hard difficulty)"
 date: 2026-05-03
 ---
 
