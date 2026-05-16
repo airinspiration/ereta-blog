@@ -12,6 +12,11 @@ Gabe Okoye has flagged a disturbing shift in our systems' lineage immediately fo
 As evidence we were given a disk image retrieved leveraging KAPE.
 <img width="859" height="420" alt="image" src="https://github.com/user-attachments/assets/7ba49bc2-52db-49d0-8d84-d467383b5a15" />
 
-I was going through the 
+Having available the WinEvent logs, I decided to leverage Chainsaw to parse them.
 
 <img width="1196" height="988" alt="image" src="https://github.com/user-attachments/assets/6e50b641-b01d-4af7-9a5f-6c70a8ad122e" />
+
+
+# Flag 6
+**What is the filename of the VBScript used to execute the next stage of the attack?**
+<img width="1770" height="522" alt="image" src="https://github.com/user-attachments/assets/a73b64b1-af38-422d-b804-945a23fa92b2" />
